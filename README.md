@@ -2,6 +2,8 @@
 
 > 브라우저 기반 이미지 조작 분석 도구 (전문가 버전)
 
+<img width="2550" height="1526" alt="image" src="https://i.imgur.com/nkj7v7p.png" />
+
 ## 1. 소개 (Introduction)
 
 Easy Forensics Pro는 웹 브라우저에서 실행되는 고급 이미지 조작 분석 도구입니다. Basic 버전의 기능에 더하여 정밀한 분석 옵션과 엣지 검출 기능을 제공합니다. 모든 처리는 클라이언트 측에서 이루어지며, 이미지 데이터는 외부로 전송되지 않습니다.
@@ -28,7 +30,7 @@ Easy Forensics Pro는 웹 브라우저에서 실행되는 고급 이미지 조�
 **요구 사항**: 최신 브라우저 (Chrome, Firefox, Edge, Safari)
 
 1. **로컬 실행**
-   - `index.html` 파일을 브라우저로 열기
+   - `index.html` 파일을 브라우저로 열기 [실행하기](<https://jtech-co.github.io/Easy-Forensics-Pro/index.html>)
    - 또는 로컬 웹 서버 사용:
      ```bash
      # Python 3
@@ -51,7 +53,7 @@ Pro/
 │   └── styles.css         # 스타일시트
 ├── js/
 │   └── main.js            # 메인 JavaScript 로직
-└── Easy Forensics Pro.html  # 레거시 파일 (보존)
+└── README.md
 ```
 
 ## 5. 사용 방법 (Usage)
@@ -83,3 +85,4 @@ Laplacian 커널을 사용하여 이미지의 불연속 영역을 검출합니�
 - **License**: MIT
 - **Version**: Pro
 - **Browser Support**: 최신 브라우저 권장 (Canvas API, FileReader API 지원 필요)
+
