@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Forensics PRO</title>
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Easy Forensics <a href="https://example.com"><span class="badge">PRO</span></a></h1>
+    </header>
+
+    <div class="main-container">
+        <div class="control-panel">
+            <label class="file-label">
+                + 원본 이미지 업로드
+                <input type="file" id="fileInput" accept="image/*">
+            </label>
+
+            <div class="section-title">분석 모드 (ANALYSIS MODE)</div>
+            <div class="btn-group">
+                <button id="btnOriginal" class="active">원본 보기</button>
+                <button id="btnELA">ELA 분석</button>
+                <button id="btnEdge">엣지 검출</button>
+            </div>
+
+            <div id="elaControls" style="display: none;">
+                <div class="section-title" style="border:none; margin-bottom:10px;">ELA 정밀 튜닝</div>
+                
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>오차 스케일 (Error Scale)</span>
+                        <span id="valScale">20</span>
+                    </div>
+                    <input type="range" id="rangeScale" min="10" max="100" value="20">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>압축 품질 (Quality)</span>
+                        <span id="valQuality">95%</span>
+                    </div>
+                    <input type="range" id="rangeQuality" min="50" max="99" value="95">
+                </div>
+                <button id="btnApplyELA" style="width: 100%; margin-top: 10px;">재분석 실행</button>
+            </div>
+
+            <div class="section-title">도구 (TOOLS)</div>
+            <div class="btn-group">
+                <button id="btnMeta">EXIF 데이터</button>
+                <button id="btnDownload">결과 저장</button>
+            </div>
+
+            <div class="info-panel" id="logPanel">시스템 준비됨. 입력 대기 중...</div>
+        </div>
+
+        <div class="canvas-area">
+            <div class="canvas-wrapper" id="canvasWrapper">
+                <div class="loading-overlay" id="loading">처리 중...</div>
+                <div id="magnifier" class="magnifier"></div>
+                <p id="placeholder" style="color: var(--spx-text-muted); font-family: var(--font-mono);">데이터 없음 (NO SIGNAL)</p>
+                <canvas id="mainCanvas"></canvas>
+            </div>
+            <div class="tip-text">/// 마우스를 올려 세부 정보 확대 | 클릭 유지 시 원본과 비교 ///</div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
